@@ -1,6 +1,5 @@
 from pymongo import MongoClient
 import pprint
-import bson
 
 client = MongoClient("mongodb://localhost:27017")
 db = client.test
@@ -9,31 +8,25 @@ db = client.test
 # product1 = {
 #     'product': 'bread',
 #     'client': 'Pietrek',
-#     'cost': '2.5'
+#     'cost': 2.5
 # }
 # product2 = {
 #     'product': 'potatos',
 #     'client': 'Zbyszek',
-#     'cost': '4'
+#     'cost': 4
 # }
 # product3 = {
 #     'product': 'bread',
 #     'client': 'Zbyszek',
-#     'cost': '2.8'
+#     'cost': 2.8
 # }
-# result = test.insert_many([product1, product2, product3])
+# result = db.testcol.insert_many([product1, product2, product3])
 
 # aggregate
-# cursor = db.test.aggregate([
-#     {'$match': {'client': 'Zbyszek'}},
-#     {'$group': {'_id': '$client', 'total': {'$sum': '$cost'}}}
-# ])
-
-cursor = db.testcol.aggregate([
+pipeline = [
+    {"$match": {'client': 'Zbyszek'}},
     {'$group': {'_id': '$client', 'total': {'$sum': '$cost'}}}
-])
+]
+result = list(db.testcol.aggregate(pipeline))
 
-pprint.pprint(cursor)
-
-# for batch in cursor:
-#     print(bson.decode_all(batch))
+pprint.pprint(result)
