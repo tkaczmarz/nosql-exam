@@ -8,7 +8,7 @@ db = client.test
 # aggregate
 pipeline = [
     {'$match': {'Arrest': 'True'}},
-    {'$group': {'_id': '$Primary Type', 'arrests': {'$sum': 1}}},
+    {'$group': {'_id': '$Primary_Type', 'arrests': {'$sum': 1}}},
     {'$sort': {'arrests': -1}}
 ]
 start_time = time.time()
