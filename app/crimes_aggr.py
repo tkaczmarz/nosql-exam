@@ -2,6 +2,7 @@ from pymongo import MongoClient
 import pprint
 import time
 
+
 def aggregattion(hostname="localhost"):
     client = MongoClient("mongodb://" + hostname + ":27017")
     db = client.test
@@ -21,3 +22,7 @@ def aggregattion(hostname="localhost"):
     pprint.pprint(result)
 
     print("execution time: " + str(exec_time) + " seconds")
+
+
+if __name__ == "__main__":
+    aggregattion("mongodb_database")

@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 import pprint
 
+
 def not_arrested(hostname="localhost"):
     client = MongoClient("mongodb://" + hostname + ":27017")
     db = client.test
@@ -18,3 +19,7 @@ def not_arrested(hostname="localhost"):
             csvfile.write("{},{}\n".format(row['_id'], row['not-arrested']))
 
     pprint.pprint(result)
+
+
+if __name__ == "__main__":
+    not_arrested("mongodb_database")

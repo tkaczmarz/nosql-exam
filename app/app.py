@@ -24,6 +24,11 @@ def start():
     import os
     os.system(
         "mongoimport --host mongodb_database --port 27017 -d test -c crimes --type csv --file /tmp/Chicago_Crimes_2001_to_2004.csv --headerline && rm /tmp/crimes.zip")
+
+    os.system("python crimes_mr.py")
+    os.system("python crimes_aggr.py")
+    os.system("python not_arrested.py")
+    os.system("python make_plots.py")
     app.run(host="0.0.0.0")
 
 

@@ -3,6 +3,7 @@ import pprint
 from bson.code import Code
 import time
 
+
 def map_reduce(hostname="localhost"):
     client = MongoClient("mongodb://" + hostname + ":27017")
     db = client.test
@@ -43,3 +44,7 @@ def map_reduce(hostname="localhost"):
     pprint.pprint(l)
 
     print("execution time: " + str(exec_time) + " seconds")
+
+
+if __name__ == "__main__":
+    map_reduce("mongodb_database")
