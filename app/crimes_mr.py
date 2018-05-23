@@ -3,8 +3,8 @@ import pprint
 from bson.code import Code
 import time
 
-def map_reduce():
-    client = MongoClient("mongodb://localhost:27017")
+def map_reduce(hostname="localhost"):
+    client = MongoClient("mongodb://" + hostname + ":27017")
     db = client.test
 
     # map function
