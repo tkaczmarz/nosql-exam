@@ -20,6 +20,7 @@ def generate_bar_chart(filename, data):
 
 
 def generate_charts():
+    plt.switch_backend('agg')
     data = read_data("crimes-mr.csv")
     data[0] = data[0][-5:]
     data[1] = data[1][-5:]
