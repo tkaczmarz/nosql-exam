@@ -5,13 +5,13 @@ app = Flask(__name__, template_folder="./templates")
 
 @app.route('/aggregate')
 def aggregate():
-    images = ["test.jpg"]
+    images = ["aggregate1.png", "aggregate2.png"]
     return render_template("aggregate.html", images=images)
 
 
 @app.route('/mapreduce')
 def mapreduce():
-    images = []
+    images = ["mapreduce1.png"]
     return render_template("mapreduce.html", images=images)
 
 
