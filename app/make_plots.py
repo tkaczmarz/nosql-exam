@@ -20,12 +20,13 @@ def generate_bar_chart(filename):
 
 
 def generate_charts():
-    pass
-
-
-if __name__ == "__main__":
     data = read_data("crimes-mr.csv")
     data[0] = data[0][-5:]
     data[1] = data[1][-5:]
     print(data)
     generate_bar_chart("mapreduce1")
+    return data
+
+
+if __name__ == "__main__":
+    data = generate_charts()

@@ -19,5 +19,4 @@ RUN pip install -r requirements.txt
 #RUN useradd -ms /bin/bash admin
 #USER admin
 
-CMD ["bash", "/app/import_data.sh"]
-CMD ["python", "app.py"]
+CMD ["python", "run.py"]
