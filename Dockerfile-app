@@ -6,9 +6,13 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF505
     apt-get install \
         mongodb-org-tools \
         unzip
-COPY crimes.zip /tmp/crimes.zip
 
+COPY crimes.zip /tmp/crimes.zip
 COPY app /app
+
+WORKDIR /tmp
+RUN unzip crimes.zip && bash /app/import_data.sh
+
 WORKDIR /app
 RUN pip install -r requirements.txt
 
