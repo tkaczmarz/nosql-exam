@@ -7,11 +7,6 @@ client = MongoClient("mongodb://localhost:27017")
 db = client.test
 
 # map function
-# mapper = Code("""
-#             function () {
-#                 emit(this.Primary_Type, this.Arrest);
-#             }
-#             """)
 mapper = Code("""
             function () {
                 emit(this.Primary_Type, 1);
@@ -28,15 +23,6 @@ reducer = Code("""
                     return sum;
                 }
                 """)
-# reducer = Code("""
-#                 function (key, values) {
-#                     var count = 0;
-#                     for (var i = 0; i < values.length; i++) {
-#                         if (values[i] == "True") count++;
-#                     }
-#                     return count;
-#                 }
-#                 """)
 
 # map reduce
 start_time = time.time()
