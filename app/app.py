@@ -21,7 +21,11 @@ def main():
 
 
 def start():
+    import os
+    os.system(
+        "mongoimport --host mongodb_database --port 27017 -d test -c crimes --type csv --file /tmp/Chicago_Crimes_2001_to_2004.csv --headerline && rm /tmp/crimes.zip")
     app.run(host="0.0.0.0")
+
 
 if __name__ == "__main__":
     start()
