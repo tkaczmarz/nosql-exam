@@ -50,7 +50,8 @@ with open('crimes-mr.csv', 'w') as csvfile:
         csvfile.write("{},{}\n".format(row['_id'], row['value']))
 
 with open('exec-times.csv', 'a') as file:
-    file.write(str(exec_time) + "\n")
+    file.write("sep=,\n")
+    file.write("{},{}\n".format("map-reduce-local", str(exec_time)))
 
 pprint.pprint(l)
 

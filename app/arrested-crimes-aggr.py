@@ -15,7 +15,7 @@ result = list(db.crimes.aggregate(pipeline))
 exec_time = time.time() - start_time
 
 with open('exec-times.csv', 'a') as file:
-    file.write(str(exec_time) + "\n")
+    file.write("{},{}\n".format("aggregate-local", str(exec_time)))
 
 pprint.pprint(result)
 
