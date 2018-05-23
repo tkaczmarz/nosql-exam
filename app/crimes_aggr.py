@@ -2,8 +2,8 @@ from pymongo import MongoClient
 import pprint
 import time
 
-def aggregattion():
-    client = MongoClient("mongodb://localhost:27017")
+def aggregattion(hostname="localhost"):
+    client = MongoClient("mongodb://" + hostname + ":27017")
     db = client.test
 
     # aggregate
