@@ -7,29 +7,52 @@ client = MongoClient("mongodb://localhost:27017")
 db = client.test
 
 # map function
+# mapper = Code("""
+#             function () {
+#                 emit(this.Primary_Type, this.Arrest);
+#             }
+#             """)
 mapper = Code("""
             function () {
-                emit(this.Primary_Type, this.Arrest);
+                emit(this.Primary_Type, 1);
             }
             """)
 
 # reduce function
 reducer = Code("""
                 function (key, values) {
-                    var count = 0;
-                    for (var i = 0; i < values.length; i++) {
-                        if (values[i] == "True") count++; 
-                    }
-                    return count;
+                    return Array.sum(values);
+                    var sum = 0;
+                    for(var i in values)
+                    sum += 1;
+                    return sum;
                 }
                 """)
+# reducer = Code("""
+#                 function (key, values) {
+#                     var count = 0;
+#                     for (var i = 0; i < values.length; i++) {
+#                         if (values[i] == "True") count++;
+#                     }
+#                     return count;
+#                 }
+#                 """)
 
 # map reduce
 start_time = time.time()
-result = db.crimes.map_reduce(mapper, reducer, 'results')
+result = db.crimes.map_reduce(mapper, reducer, "arrests")
 exec_time = time.time() - start_time
+l = list(result.find())
+import csv
+with open('crimes-mr.csv', 'w') as csvfile:
+    csvfile.write("sep=,\n")
+    for row in l:
+        csvfile.write("{},{}\n".format(row['_id'], row['value']))
 
-for doc in result.find():
-    pprint.pprint(doc)
+with open('exec-times.csv', 'a') as file:
+    file.write("sep=,\n")
+    file.write(str(exec_time) + "\n")
+
+pprint.pprint(l)
 
 print("execution time: " + str(exec_time) + " seconds")
