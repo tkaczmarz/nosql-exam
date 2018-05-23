@@ -11,7 +11,7 @@ COPY crimes.zip /tmp/crimes.zip
 COPY app /app
 
 WORKDIR /tmp
-RUN unzip crimes.zip && mongoimport --host mongodb_database --port 27017 -d test -c crimes --type csv --file /tmp/Chicago_Crimes_2001_to_2004.csv --headerline && rm /tmp/crimes.zip
+RUN unzip crimes.zip
 
 WORKDIR /app
 RUN pip install -r requirements.txt
@@ -19,4 +19,5 @@ RUN pip install -r requirements.txt
 #RUN useradd -ms /bin/bash admin
 #USER admin
 
+CMD ["bash", "/app/import_data.sh"]
 CMD ["python", "app.py"]
