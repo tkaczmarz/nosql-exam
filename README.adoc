@@ -7,6 +7,8 @@ link:https://www.kaggle.com/currie32/crimes-in-chicago[Kaggle: Chrimes in Chicag
 Z racji dużego rozmiaru wszystkich plików, pobieramy tylko 1 plik z:
 link:https://drive.google.com/open?id=1RsdupD21BNRxMU7TW1O4o76vgdZoKpJ0[https://drive.google.com/open?id=1RsdupD21BNRxMU7TW1O4o76vgdZoKpJ0]
 
+Zawiera on 1{nbsp}923{nbsp}516 dokumentów, co na potrzeby testów wystarczy.
+
 == Aplikacja
 Kod aplikacji znajduje się w katalogu *app*. Z technicznych rzeczy, zawiera ona skrypt do
 importowania danych za pomocą mongoimport, a także skrypty napisane w Pythonie 3 do wykonywania operacji agregacji, mapreduce
