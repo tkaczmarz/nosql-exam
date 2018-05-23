@@ -1,0 +1,70 @@
+= Projekt NoSQL - Piotr Kawa i Tomasz Kaczmarz
+
+== Baza danych
+Baza danych została zaczerpnięta z
+link:https://www.kaggle.com/currie32/crimes-in-chicago[Kaggle: Chrimes in Chicago].
+
+Z racji dużego rozmiaru wszystkich plików, pobieramy tylko 1 plik z:
+link:https://drive.google.com/open?id=1RsdupD21BNRxMU7TW1O4o76vgdZoKpJ0[https://drive.google.com/open?id=1RsdupD21BNRxMU7TW1O4o76vgdZoKpJ0]
+
+== Aplikacja
+Kod aplikacji znajduje się w katalogu *app*. Z technicznych rzeczy, zawiera ona skrypt do
+importowania danych za pomocą mongoimport, a także skrypty napisane w Pythonie 3 do wykonywania operacji agregacji, mapreduce
+na bazie mongodb. Wyniki są przedstawiane  na wykresach, w katalogu *app/static*.
+
+Istnieje także aplikacja napisana w flask, która pozwala wygodnie podejrzeć wykresy przez wejście
+na *_localhost:5000/_*.
+
+== Zdeployowanie aplikacji
+Aplikacja jest gotowa do zdeployowana przy użyciu dockera.
+
+Są tworzone 2 kontenery:
+
+- nosql_app
+- mongodb_database
+
+Aplikacja "nosql_app" posiada swój własny Dockerfile pod nazwą *Dockerfile-app*.
+
+
+==== nosql_app
+nosql_app bazuje na ofijcalnym obrazie pythona z link:https://hub.docker.com/_/python/[hub.docker.com].
+Użyty tag dla tego obrazu w Dockerfile, to
+[source, Dockerfile]
+----
+FROM python:3.6.5
+----
+
+
+==== mongodb_database
+mongodb_database bazuje na link:https://hub.docker.com/_/mongo/[oficjalnym obrazie mongodb]. Uzywana jest wersja 3.6.4
+
+W dockerfile-compose.yml jest stworzona konfiguracja na tworzenie obu kontenerów.
+Kontenery są zlinkowane i odpowiednio skonfigurowane. Z racji, że aplikacja potrzebuje
+połączenie z bazą danych, w docker-compose.yml została zawarta relacja pomiędzy
+kontenerem z mongodb, a kontenerem z aplikacją, tak, aby mongodb zawsze uruchamiało się pierwsze.
+
+Fragment pliku konfiguracyjnego:
+[source, yaml]
+----
+  nosql_app:
+    build:
+      context: .
+      dockerfile: Dockerfile-app
+    image: aurustius/nosql_app:1.0
+    ports:
+      - "5000:5000"
+    container_name: nosql_app
+    depends_on:
+      - mongo
+----
+
+Dzięki temu nosql_app zawsze zna adres IP kontenera z bazą MongoDB, ponieważ mamy
+zdefiniowany hostname *mongodb_database* automatycznie.
+
+== Uruchomienie dockera za pomocą docker-compose
+W katalogu głównym repozytorium wpisujemy następujące komendy
+[source, bash]
+----
+docker-compose build
+docker-compose up -d
+----

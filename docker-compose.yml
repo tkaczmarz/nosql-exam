@@ -1,0 +1,15 @@
+version: '3'
+services:
+  nosql_app:
+    build:
+      context: .
+      dockerfile: Dockerfile-app
+    image: aurustius/nosql_app:1.0
+    ports:
+      - "5000:5000"
+    container_name: nosql_app
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:latest
+    container_name: mongodb_database
