@@ -43,14 +43,13 @@ start_time = time.time()
 result = db.crimes.map_reduce(mapper, reducer, "arrests")
 exec_time = time.time() - start_time
 l = list(result.find())
-import csv
+
 with open('crimes-mr.csv', 'w') as csvfile:
     csvfile.write("sep=,\n")
     for row in l:
         csvfile.write("{},{}\n".format(row['_id'], row['value']))
 
 with open('exec-times.csv', 'a') as file:
-    file.write("sep=,\n")
     file.write(str(exec_time) + "\n")
 
 pprint.pprint(l)

@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="arrested-crimes-map-reduce.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="arrested-crimes-map-reduce.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/arrested-crimes-map-reduce.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="379">
-              <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+              <caret line="52" column="37" selection-start-line="46" selection-end-line="52" selection-end-column="37" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -23,11 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arrested-crimes-aggr.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="arrested-crimes-aggr.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/arrested-crimes-aggr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="224">
+              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -54,8 +54,8 @@
         <option value="$PROJECT_DIR$/arrested-thefts.py" />
         <option value="$PROJECT_DIR$/map-reduce.py" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/arrested-crimes-aggr.py" />
         <option value="$PROJECT_DIR$/arrested-crimes-map-reduce.py" />
+        <option value="$PROJECT_DIR$/arrested-crimes-aggr.py" />
       </list>
     </option>
   </component>
@@ -101,7 +101,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.arrested-crimes-map-reduce">
+  <component name="RunManager" selected="Python.arrested-crimes-aggr">
     <configuration name="arrested-crimes-aggr" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="nosql" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -201,8 +201,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.arrested-crimes-map-reduce" />
         <item itemvalue="Python.arrested-crimes-aggr" />
+        <item itemvalue="Python.arrested-crimes-map-reduce" />
         <item itemvalue="Python.map-reduce" />
         <item itemvalue="Python.arrested-thefts" />
         <item itemvalue="Python.test" />
@@ -233,7 +233,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005441" side_tool="true" weight="0.27726808" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32925585" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49945593" visible="true" weight="0.21136063" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49945593" visible="true" weight="0.32628798" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32925585" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -486,20 +486,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/arrested-crimes-aggr.py">
+    <entry file="file://$PROJECT_DIR$/arrested-crimes-map-reduce.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="379">
+          <caret line="52" column="37" selection-start-line="46" selection-end-line="52" selection-end-column="37" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/arrested-crimes-map-reduce.py">
+    <entry file="file://$PROJECT_DIR$/arrested-crimes-aggr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+        <state relative-caret-position="224">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
