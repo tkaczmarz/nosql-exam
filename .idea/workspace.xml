@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16ab6da2-a532-4653-9d7d-c407399c4422" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crimes_aggr.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/crimes_aggr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crimes_mr.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/crimes_mr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/not_arrested.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/not_arrested.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/make_plots.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/make_plots.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="make_plots.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="make_plots.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/make_plots.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="195">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -34,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+            <state relative-caret-position="161">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -128,13 +125,13 @@
         <option value="$PROJECT_DIR$/app/exec-times.csv" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/run.py" />
-        <option value="$PROJECT_DIR$/app/make_plots.py" />
         <option value="$PROJECT_DIR$/app/run.py" />
         <option value="$PROJECT_DIR$/Dockerfile-app" />
         <option value="$PROJECT_DIR$/app/crimes_aggr.py" />
         <option value="$PROJECT_DIR$/app/crimes_mr.py" />
         <option value="$PROJECT_DIR$/app/not_arrested.py" />
         <option value="$PROJECT_DIR$/app/app.py" />
+        <option value="$PROJECT_DIR$/app/make_plots.py" />
       </list>
     </option>
   </component>
@@ -477,17 +474,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/make_plots.py">
+    <entry file="file://$PROJECT_DIR$/app/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.py">
+    <entry file="file://$PROJECT_DIR$/app/make_plots.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+        <state relative-caret-position="195">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>

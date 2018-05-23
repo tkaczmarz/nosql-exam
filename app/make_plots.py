@@ -12,7 +12,7 @@ def read_data(filename, keys=["Primary_Type", "value"]):
         return documents
 
 
-def generate_bar_chart(filename):
+def generate_bar_chart(filename, data):
     plt.bar(data[0], data[1])
     plt.xlabel("Type of crime")
     plt.ylabel("Amount of crimes commited")
@@ -24,7 +24,7 @@ def generate_charts():
     data[0] = data[0][-5:]
     data[1] = data[1][-5:]
     print(data)
-    generate_bar_chart("mapreduce1")
+    generate_bar_chart("mapreduce1", data)
     return data
 
 
