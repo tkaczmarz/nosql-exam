@@ -16,7 +16,7 @@ def generate_bar_chart(filename):
     plt.bar(data[0], data[1])
     plt.xlabel("Type of crime")
     plt.ylabel("Amount of crimes commited")
-    plt.savefig("./static/{}.png".format(filename))
+    plt.savefig("./templates/static/{}.png".format(filename))
 
 
 def generate_charts():
